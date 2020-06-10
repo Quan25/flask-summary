@@ -9,6 +9,7 @@ Features
 Installation In A Nutshell (on localhost)
 --------------------------
  1. Install [Flask](https://flask.palletsprojects.com/en/1.1.x/installation/#installation)
+ 2. pyrouge is an essential module for PreSumm to run, please follow the instruction [here](https://github.com/bheinzerling/pyrouge) about how to install pyrouge
  2. Run `python app.py` in the flask-summary directory.
  3. Start web server by running `python app.py` while in the server_example directory.
  5. Browse the examples using a browser. *(defaults to port `5000`)*
