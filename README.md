@@ -12,6 +12,14 @@ Features
 
 Installation In A Nutshell (on localhost)
 --------------------------
+ 1. clone this project to your local disk
+ '''
+  git clone https://github.com/Quan25/flask-summary.git
+ '''
+ 2. cd into the cloned project and download PreSumm
+ '''
+  git clone https://github.com/nlpyang/PreSumm.git
+ '''
  1. Install [Flask](https://flask.palletsprojects.com/en/1.1.x/installation/#installation)
  2. pyrouge is an essential module for PreSumm to run, please follow the instruction [here](https://github.com/bheinzerling/pyrouge) about how to install pyrouge
  3. Please install pytorch 1.1.0 with this comand
