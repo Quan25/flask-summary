@@ -20,9 +20,9 @@ Installation In A Nutshell (on localhost)
  '''
   git clone https://github.com/nlpyang/PreSumm.git
  '''
- 1. Install [Flask](https://flask.palletsprojects.com/en/1.1.x/installation/#installation)
- 2. pyrouge is an essential module for PreSumm to run, please follow the instruction [here](https://github.com/bheinzerling/pyrouge) about how to install pyrouge
- 3. Please install pytorch 1.1.0 with this comand
+ 3. Install [Flask](https://flask.palletsprojects.com/en/1.1.x/installation/#installation)
+ 4. pyrouge is an essential module for PreSumm to run, please follow the instruction [here](https://github.com/bheinzerling/pyrouge) about how to install pyrouge
+ 5. Please install pytorch 1.1.0 with this comand
  - GPU
 ```
   conda install pytorch==1.1.0 torchvision==0.3.0 cudatoolkit=10.0 -c pytorch
@@ -31,7 +31,7 @@ Installation In A Nutshell (on localhost)
 ```
   conda install pytorch-cpu==1.1.0 torchvision-cpu==0.3.0 cpuonly -c pytorch
 ```
- 4. put your model file(i.e. xxxxx.pt) inside /PreSumm/models
- 5. Run `python app.py` in the flask-summary directory.
- 6. Start web server by running `python app.py` while in the server_example directory.
- 7. Browse the examples using a browser. *(defaults to port `5000`)*
+ 6. put your model file(i.e. xxxxx.pt) inside /PreSumm/models
+ 7. Run `python app.py` in the flask-summary directory.
+ 8. Start web server by running `python app.py` while in the server_example directory.
+ 9. Browse the examples using a browser. *(defaults to port `5000`)*
