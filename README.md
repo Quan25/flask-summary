@@ -25,8 +25,24 @@ Installation In A Nutshell (on localhost)
   git checkout dev
  ```
  4. Install [Flask](https://flask.palletsprojects.com/en/1.1.x/installation/#installation)
- 5. pyrouge is an essential module for PreSumm to run, please follow the instruction [here](https://github.com/bheinzerling/pyrouge) about how to install pyrouge
- 6. Please install pytorch 1.1.0 with this comand
+ 5. Install [ROUGE-1.5.5](https://drive.google.com/file/d/1RxfZOYyNvzvCf37_vABfJMkohAsEZKtH/view?usp=sharing)
+  - Install `libxml-parser-perl`, it is essential for installing ROUGE-1.5.5
+  ```
+    sudo apt-get install libxml-parser-perl
+  ```
+  - and make sure you can run this, which means the ROUGE is successfully installed
+  ```
+    ./runROUGE-test.pl
+  ```
+ 6. Install pyrouge
+ ```
+  git clone https://github.com/bheinzerling/pyrouge.git
+  cd pyrouge
+  pip install -e .
+ ```
+  Additional information can be found [here](https://github.com/bheinzerling/pyrouge) about how to install pyrouge and running the test
+
+ 7. Please install pytorch 1.1.0 with this comand
  - GPU
 ```
   conda install pytorch==1.1.0 torchvision==0.3.0 cudatoolkit=10.0 -c pytorch
@@ -35,7 +51,7 @@ Installation In A Nutshell (on localhost)
 ```
   conda install pytorch-cpu==1.1.0 torchvision-cpu==0.3.0 cpuonly -c pytorch
 ```
- 7. put your model file(i.e. xxxxx.pt) inside ```/PreSumm/models ```
- 8. Run `python app.py` in the flask-summary directory.
- 9. Start web server by running `python app.py` while in the server_example directory.
- 10. Browse the examples at [0.0.0.0:5000](http://0.0.0:5000) using a browser. *(defaults to port `5000`)*
+ 8. put your model file(i.e. xxxxx.pt) inside ```/PreSumm/models ```
+ 9. Run `python app.py` in the flask-summary directory.
+ 10. Start web server by running `python app.py` while in the server_example directory.
+ 11. Browse the examples at [0.0.0.0:5000](http://0.0.0:5000) using a browser. *(defaults to port `5000`)*
