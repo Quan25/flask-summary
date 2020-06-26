@@ -38,4 +38,4 @@ Installation In A Nutshell (on localhost)
  7. put your model file(i.e. xxxxx.pt) inside ```/PreSumm/models ```
  8. Run `python app.py` in the flask-summary directory.
  9. Start web server by running `python app.py` while in the server_example directory.
- 10. Browse the examples at [0.0.0.0:5000](0.0.0:5000) using a browser. *(defaults to port `5000`)*
+ 10. Browse the examples at [0.0.0.0:5000](http://0.0.0:5000) using a browser. *(defaults to port `5000`)*
