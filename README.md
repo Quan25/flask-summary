@@ -40,7 +40,7 @@ Installation In A Nutshell (on localhost)
   cd pyrouge
   pip install -e .
  ```
-    Additional information can be found [here](https://github.com/bheinzerling/pyrouge) about how to install pyrouge and running the test
+ - Additional information can be found [here](https://github.com/bheinzerling/pyrouge) about how to install pyrouge and running the test
 
  7. Please install pytorch 1.1.0 with this comand
  - GPU
