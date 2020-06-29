@@ -52,6 +52,12 @@ Installation In A Nutshell (on localhost)
   conda install pytorch-cpu==1.1.0 torchvision-cpu==0.3.0 cpuonly -c pytorch
 ```
  8. put your model file(i.e. xxxxx.pt) inside ```/PreSumm/models ```
- 9. Run `python app.py` in the flask-summary directory.
- 10. Start web server by running `python app.py` while in the server_example directory.
- 11. Browse the examples at [0.0.0.0:5000](http://0.0.0:5000) using a browser. *(defaults to port `5000`)*
+ 9. add the following `PYTHONPATH` to bash_profile
+ ```
+  export PYTHONPATH=$PYTHONPATH:~/Desktop/flask_summary/PreSumm/src
+
+ ```
+ 10. run `source ~/.bash_profile`
+ 11. Run `python app.py` in the flask-summary directory.
+ 12. Start web server by running `python app.py` while in the server_example directory.
+ 13. Browse the examples at [0.0.0.0:5000](http://0.0.0:5000) using a browser. *(defaults to port `5000`)*
