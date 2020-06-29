@@ -54,7 +54,8 @@ Installation In A Nutshell (on localhost)
  8. put your model file(i.e. xxxxx.pt) inside ```/PreSumm/models ```
  9. add the following `PYTHONPATH` to bash_profile
  ```
-  export PYTHONPATH=$PYTHONPATH:~/Desktop/flask_summary/PreSumm/src
+  export PYTHONPATH=$PYTHONPATH:/path/to/flask-summary/PreSumm/src
+  export PYTHONPATH=$PYTHONPATH:/path/to/flask-summary/PreSumm/
 
  ```
  10. run `source ~/.bash_profile`
