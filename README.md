@@ -55,3 +55,7 @@ Installation In A Nutshell (on localhost)
  9. Run `python app.py` in the flask-summary directory.
  10. Start web server by running `python app.py` while in the server_example directory.
  11. Browse the examples at [0.0.0.0:5000](http://0.0.0:5000) using a browser. *(defaults to port `5000`)*
+
+ Screen Demo
+ --------
+![Screen Demo](demo.png)
