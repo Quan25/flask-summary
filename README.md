@@ -44,17 +44,14 @@ Installation In A Nutshell (on localhost)
 ```
   conda install pytorch-cpu==1.1.0 torchvision-cpu==0.3.0 cpuonly -c pytorch
 ```
- 6. put your model file(i.e. xxxxx.pt) inside ```/PreSumm/models ```
- 7. add the following `PYTHONPATH` to bash_profile
+ 6. Download [pretrained-bert-model](https://s3.amazonaws.com/models.huggingface.co/bert/bert-large-uncased.tar.gz), and unzip it to a location you like
+ 7. Change the path in `BertParent.py` in `summarizer` folder
  ```
-  export PYTHONPATH=$PYTHONPATH:/path/to/flask-summary/PreSumm/src
-  export PYTHONPATH=$PYTHONPATH:/path/to/flask-summary/PreSumm/
-
+  self.model = BertModel.from_pretrained('/path/to/bert-large-uncased')
  ```
- 8. run `source ~/.bash_profile`
- 9. Run `python app.py` in the flask-summary directory.
- 10. Start web server by running `python app.py` while in the server_example directory.
- 11. Browse the examples at [0.0.0.0:5000](http://0.0.0:5000) using a browser. *(defaults to port `5000`)*
+ 8. Run `python app.py` in the flask-summary directory.
+ 9. Start web server by running `python app.py` while in the server_example directory.
+ 10. Browse the examples at [0.0.0.0:5000](http://0.0.0:5000) using a browser. *(defaults to port `5000`)*
 
  Screen Demo
  --------
