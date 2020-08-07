@@ -1,10 +1,43 @@
 <html>
-   <body>
-      <form action = "{{url_for('result')}}" method = "POST">
-        <p>Please paste the contents that you want to summarize: </p>
-         <textarea name="text" rows="8" cols="80"></textarea>
+  <title>Flask Summary</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <script>
+    function reset() {
+      confirm("Are you sure you want to reset the stored students' essays?");
+    }
+    function updateTextInput(val) {
+          document.getElementById('textInput').value=val+'%';
+    }
+    </script>
+    <body>
+       <div id="left">
+        <form action = "{{url_for('result')}}" method = "POST">
+          <p>Please paste the contents that you want to summarize: </p>
+           <textarea name="text" rows="8" cols="40" >{{originalText}}</textarea>
+           <p><input type="radio" id="instructor" name="add" value="Add To Instructor" checked />
+           <label for="instructor">Add To Instructor</label><br>
+           <input type="radio" id="student" name="add" value="Add To Student"  />
+           <label for="student">Add To Student</label><br></p>
 
-         <p><input type = "submit" value = "submit" /></p>
-      </form>
-   </body>
+           <input type="range" name="ratio" min="1" max="100" value="{{ratio}}"onchange="updateTextInput(this.value);">
+           <output id="textInput" >{{ratio+'%'}}</output>
+           <p><input type = "submit" value = "submit" /></p>
+
+
+        </form>
+
+        <form action = "{{url_for('grade')}}" method = "POST">
+        <p><input type = "submit" value = "Grade Students" /></p>
+        </form>
+
+        <form action = "{{url_for('reset')}}" method = "POST">
+        <p><input onclick="reset()" type = "submit" value = "Reset" /></p>
+        </form>
+
+
+
+
+      </div>
+        {% include 'result.html' %}
+     </body>
 </html>

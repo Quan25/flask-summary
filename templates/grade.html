@@ -1,0 +1,29 @@
+<html>
+  <title>Essay Grading</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <body>
+      <h2>Instructor Essay Summary</h2>
+      <li>Instructor: </li>
+        <ol>Essay Summary: {{instructor}}</ol>
+      <h2>Student Grade Rank (From High to Low)</h2>
+      <h3>Student Score Percentile</h3>
+      <table>
+      {% for columnName, data in percentile.items() %}
+      <tr>
+        <th> {{ columnName }} </th>
+
+        {% for each in data %}
+          <td> {{ data[each] }} </td>
+        {% endfor %}
+
+      </tr>
+      {% endfor %}
+      </table>
+      {%for each in grade%}
+
+      <li>Student Name: {{each[1]}}</li>
+      
+        <ol>Essay Summary: {{each[2]}}</ol>
+      {%endfor%}
+     </body>
+</html>
