@@ -94,3 +94,15 @@ def parse_args():
     args.param_init=0
 
     return args
+
+    def textFormatter(originalText):
+    	processText=""
+    	formattedText=''
+    	processText = ''.join([line for line in originalText.splitlines() if line.strip()])
+    	for each in processText.split('.'):
+    		if(each != ''):
+    			if(each[0] == ' '):
+    				formattedText += each[1:] + '.\n'
+    			else:
+    				formattedText += each + '.\n'
+    	return formattedText

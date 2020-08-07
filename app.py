@@ -18,9 +18,17 @@ def result():
       args = argsParser.parse_args()
 
       text_to_save = open("PreSumm/raw_data/temp.raw_src", "w")
+      processText=""
+      formattedText=''
+      processText = ''.join([line for line in originalText.splitlines() if line.strip()])
+      for each in processText.split('.'):
+          if(each != ''):
+              if(each[0] == ' '):
+                  formattedText += each[1:] + '. '
+              else:
+                  formattedText += each + '. '
 
-      originalText = originalText.replace("\n", "")
-      text_to_save.write(originalText)
+      text_to_save.write(formattedText)
       text_to_save.close()
       test_text_abs(args)
       summary = open("PreSumm/results/cnndm.-1.candidate", "rt")
@@ -31,4 +39,4 @@ def result():
       return render_template("result.html",summaryText = result)
 
 if __name__ == '__main__':
-   app.run(host='0.0.0.0', debug=True)
+   app.run(debug=True)
