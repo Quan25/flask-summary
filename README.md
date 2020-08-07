@@ -1,6 +1,6 @@
 # Flask Summary
 
-** PreSumm modules was originally from https://github.com/nlpyang/PreSumm **
+** Partial was originally from https://github.com/dmmiller612/lecture-summarizer.git **
 
 Features
 --------
@@ -16,16 +16,9 @@ Installation In A Nutshell (on localhost)
  ```
   git clone https://github.com/Quan25/flask-summary.git
  ```
- 2. cd into the cloned project and download PreSumm
- ```
-  git clone https://github.com/nlpyang/PreSumm.git
- ```
- 3. cd into PreSumm folder and change the branch to dev
- ```
-  git checkout dev
- ```
- 4. Install [Flask](https://flask.palletsprojects.com/en/1.1.x/installation/#installation)
- 5. Install [ROUGE-1.5.5](https://drive.google.com/file/d/1RxfZOYyNvzvCf37_vABfJMkohAsEZKtH/view?usp=sharing)
+
+ 2. Install [Flask](https://flask.palletsprojects.com/en/1.1.x/installation/#installation)
+ 3. Install [ROUGE-1.5.5](https://drive.google.com/file/d/1RxfZOYyNvzvCf37_vABfJMkohAsEZKtH/view?usp=sharing)
   - Install `libxml-parser-perl`, it is essential for installing ROUGE-1.5.5
   ```
     sudo apt-get install libxml-parser-perl
@@ -34,7 +27,7 @@ Installation In A Nutshell (on localhost)
   ```
     ./runROUGE-test.pl
   ```
- 6. Install pyrouge
+ 4. Install pyrouge
  ```
   git clone https://github.com/bheinzerling/pyrouge.git
   cd pyrouge
@@ -42,7 +35,7 @@ Installation In A Nutshell (on localhost)
  ```
  - Additional information can be found [here](https://github.com/bheinzerling/pyrouge) about how to install pyrouge and running the test
 
- 7. Please install pytorch 1.1.0 with this comand
+ 5. Please install pytorch 1.1.0 with this comand
  - GPU
 ```
   conda install pytorch==1.1.0 torchvision==0.3.0 cudatoolkit=10.0 -c pytorch
@@ -51,14 +44,14 @@ Installation In A Nutshell (on localhost)
 ```
   conda install pytorch-cpu==1.1.0 torchvision-cpu==0.3.0 cpuonly -c pytorch
 ```
- 8. put your model file(i.e. xxxxx.pt) inside ```/PreSumm/models ```
- 9. add the following `PYTHONPATH` to bash_profile
+ 6. put your model file(i.e. xxxxx.pt) inside ```/PreSumm/models ```
+ 7. add the following `PYTHONPATH` to bash_profile
  ```
   export PYTHONPATH=$PYTHONPATH:/path/to/flask-summary/PreSumm/src
   export PYTHONPATH=$PYTHONPATH:/path/to/flask-summary/PreSumm/
 
  ```
- 10. run `source ~/.bash_profile`
- 11. Run `python app.py` in the flask-summary directory.
- 12. Start web server by running `python app.py` while in the server_example directory.
- 13. Browse the examples at [0.0.0.0:5000](http://0.0.0:5000) using a browser. *(defaults to port `5000`)*
+ 8. run `source ~/.bash_profile`
+ 9. Run `python app.py` in the flask-summary directory.
+ 10. Start web server by running `python app.py` while in the server_example directory.
+ 11. Browse the examples at [0.0.0.0:5000](http://0.0.0:5000) using a browser. *(defaults to port `5000`)*
