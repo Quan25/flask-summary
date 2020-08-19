@@ -1,13 +1,2 @@
-Flask
-numpy
-nltk
-sqlalchemy
-torch
-pytorch-pretrained-bert
-annoy
-flask-cors
-Cython
-tqdm
-sklearn
 gensim
-matplotlib==3.0.3
+pytorch_pretrained_bert

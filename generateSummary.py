@@ -1,5 +1,6 @@
 import summarizerApp
 import argparse
+import time
 
 def check_ratio(value):
     ivalue = int(value)
@@ -21,6 +22,12 @@ with args.infile as infile:
     for line in infile:
         originalText += line
 formattedText: str = summarizerApp.textFormatter(originalText)
+start = time.time()
 result :str = summarizerApp.createSummary(formattedText, int(args.ratio)/100)
+end = time.time()
+
+elapsedTime="Total Time cost:" + str(round(end-start,2)) + "s"
+
 print(f'Summary from given text at ratio {args.ratio}%: ')
 print(result)
+print(elapsedTime)
