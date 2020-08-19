@@ -45,7 +45,7 @@ class BertParent(object):
 
     def __init__(self, model_type: str, size: str):
         #self.model = self.model_handler[model_type].from_pretrained(self.size_handler[size][model_type])
-        self.model = BertModel.from_pretrained('/home/quan/Downloads/bert-large-uncased')
+        self.model = BertModel.from_pretrained('/Users/quan/Downloads/bert-large-uncased')
         self.tokenizer = self.token_handler[model_type].from_pretrained(self.size_handler[size][model_type])
         self.vector_size = self.vector_handler[size][model_type]
         self.model_type = model_type

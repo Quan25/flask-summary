@@ -1,0 +1,1 @@
+We’ve added the add_argument() method, which is what we use to specify which command-line options the program is willing to accept. The parse_args() method actually returns some data from the options specified, in this case, echo.
